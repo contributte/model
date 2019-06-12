@@ -4,8 +4,15 @@ View-model and model tools for Nette Framework.
 
 ## Content
 
+- [Setup](#setup)
 - [Collections](#collections)
 - [Values](#values)
+
+## Setup
+
+```bash
+composer require contributte/model
+```
 
 ## Collections
 
