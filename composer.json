@@ -19,7 +19,7 @@
   ],
   "require": {
     "php": "^7.2",
-    "nette/utils": "^2.5.2"
+    "nette/utils": "~3.0.1"
   },
   "require-dev": {
     "ninjify/nunjuck": "^0.2.0",
@@ -50,7 +50,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "0.2.x-dev"
+      "dev-master": "0.3.x-dev"
     }
   }
 }
