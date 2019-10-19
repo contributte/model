@@ -29,6 +29,7 @@ class LazyCollection implements IteratorAggregate
 		if ($this->data === null) {
 			$this->data = call_user_func($this->callback);
 		}
+
 		return new ArrayIterator($this->data);
 	}
 
