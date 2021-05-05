@@ -1,24 +1,25 @@
-# Model
+![](https://heatbadger.now.sh/github/readme/contributte/model/?deprecated=1)
 
-View-model and model tools for Nette Framework.
+<p align=center>
+    <a href="https://bit.ly/ctteg"><img src="https://badgen.net/badge/support/gitter/cyan"></a>
+    <a href="https://bit.ly/cttfo"><img src="https://badgen.net/badge/support/forum/yellow"></a>
+    <a href="https://contributte.org/partners.html"><img src="https://badgen.net/badge/sponsor/donations/F96854"></a>
+</p>
 
-[![Build Status](https://img.shields.io/travis/contributte/model.svg?style=flat-square)](https://travis-ci.org/contributte/model)
-[![Code coverage](https://img.shields.io/coveralls/contributte/model.svg?style=flat-square)](https://coveralls.io/r/contributte/model)
-[![Licence](https://img.shields.io/packagist/l/contributte/model.svg?style=flat-square)](https://packagist.org/packages/contributte/model)
-[![Downloads this Month](https://img.shields.io/packagist/dm/contributte/model.svg?style=flat-square)](https://packagist.org/packages/contributte/model)
-[![Downloads total](https://img.shields.io/packagist/dt/contributte/model.svg?style=flat-square)](https://packagist.org/packages/contributte/model)
-[![Latest stable](https://img.shields.io/packagist/v/contributte/model.svg?style=flat-square)](https://packagist.org/packages/contributte/model)
-[![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
+<p align=center>
+    Website 🚀 <a href="https://contributte.org">contributte.org</a> | Contact 👨🏻‍💻 <a href="https://f3l1x.io">f3l1x.io</a> | Twitter 🐦 <a href="https://twitter.com/contributte">@contributte</a>
+</p>
 
-## Discussion / Help
+## Disclaimer
 
-[![Join the chat](https://img.shields.io/gitter/room/contributte/contributte.svg?style=flat-square)](http://bit.ly/ctteg)
+| :warning: | This project is no longer being maintained. Please use [contributte/utils](https://github.com/contributte/utils).
+|---|---|
 
-## Documentation
-
-- [Setup](.docs/README.md#setup)
-- [Collections](.docs/README.md#collections)
-- [Values](.docs/README.md#values)
+| Composer | [`contributte/model`](https://packagist.org/contributte/model) |
+|---| --- |
+| Version | ![](https://badgen.net/packagist/v/contributte/model) |
+| PHP | ![](https://badgen.net/packagist/php/contributte/model) |
+| License | ![](https://badgen.net/github/license/contributte/model) |
 
 ## Versions
 
@@ -28,20 +29,45 @@ View-model and model tools for Nette Framework.
 | stable      | `^0.2`  | `master` | 3.0+  | `^7.2`  |
 | stable      | `^0.1`  | `master` | 2.4   | `>=7.1` |
 
-## Maintainers
+## Usage
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-        <a href="https://github.com/f3l1x">
-            <img width="150" height="150" src="https://avatars2.githubusercontent.com/u/538058?v=3&s=150">
-        </a>
-        </br>
-        <a href="https://github.com/f3l1x">Milan Felix Šulc</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+### Collections
 
-Thank you for testing, reporting and contributing.
+#### LazyCollection
+
+Initializes data only when required.
+
+```php
+use Contributte\Model\ViewModel\Collections\LazyCollection;
+
+$items = LazyCollection::fromCallback(callback $datasource);
+
+foreach($items as $item) { // Datasource callback is called on first access
+
+}
+```
+
+### Values
+
+#### Email
+
+```php
+use Contributte\Model\Values\Email;
+
+$email = new Email('foo@example.com'); // Validate email format
+$value = $email->get(); // Get value
+$equal = $email->equal(new Email('foo@example.com')); // Compare values of objects
+```
+
+## Development
+
+This package was maintain by these authors.
+
+<a href="https://github.com/f3l1x">
+  <img width="80" height="80" src="https://avatars2.githubusercontent.com/u/538058?v=3&s=80">
+</a>
+
+-----
+
+Consider to [support](https://contributte.org/partners.html) **contributte** development team.
+Also thank you for being used this package.
