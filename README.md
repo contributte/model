@@ -15,7 +15,7 @@
 | :warning: | This project is no longer being maintained. Please use [contributte/utils](https://github.com/contributte/utils).
 |---|---|
 
-| Composer | [`contributte/model`](https://packagist.org/contributte/model) |
+| Composer | [`contributte/model`](https://packagist.org/packages/contributte/model) |
 |---| --- |
 | Version | ![](https://badgen.net/packagist/v/contributte/model) |
 | PHP | ![](https://badgen.net/packagist/php/contributte/model) |
